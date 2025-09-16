@@ -166,10 +166,6 @@ section{
     line-height: 22px;
 }
 
-.home-img{
-    border-radius: 50%;
-}
-
 .home-img img{
     position: relative;
     width: 28vw;
@@ -263,19 +259,19 @@ section{
 
 @keyframes words{
     0%, 20%{
-        content: "Mobile Developer";
+        content: "Programmer";
     }
     21%, 40%{
-        content: "Website Developer";
+        content: "Tech Enthusiast";
     }
     41%, 60%{
-        content: "Small Designer";
+        content: "Small Writer";
     }
     61%, 80%{
-        content: "Simple Writer";
+        content: "Flexible Learner";
     }
     81%, 100%{
-        content: "College Student";
+        content: "Practice Assistant";
     }
 }
 
@@ -312,39 +308,40 @@ section{
     align-items: center;
 }
 
-.about-img img{
-    margin-top: 70px; 
-    margin-right: 110px;
-    width: 100%;
-    height: 450px;
-    max-width: 450px;
-    border-radius: 50%;
-    cursor: pointer;
-    object-fit: cover;
-    border: 7px solid var(--main-color);
-    box-shadow: 0 0 20px var(--main-color);
+.about .title{
+    font-size: var(--h3-font);
+    font-weight: 700;
+    text-align: left;
+    margin: 4rem 0 3rem;
+}
+
+.about .container{
     float: right;
+    display: inline-grid;
+    grid-template-columns: auto auto;
+    gap: 15px 15px;
+}
+
+.container > img{
+    width: 180px;
+    height: 250px;
+    object-fit: cover;
+    border: 3px solid var(--main-color);
 }
 
 .about-content{
-    text-align: center;
-}
+    text-align: justify;
 
-.about .title{
-    margin-top: 50px; 
-    font-size: var(--h3-font);
-    margin-bottom: 1rem;
-    font-weight: 700;
-}
+    p{
+        font-size: var(--p-font);
+        line-height: 32px;
+    }
 
-.about-text p{
-    font-size: var(--p-font);
-    font-weight: 600;
-    line-height: 42px;
-}
-
-.about-text span{
-    font-weight: 400;
+    h1{
+        font-size: var(--h1-font);
+        font-weight: 600;
+        color: var(--main-color);
+    }
 }
 
 .about-btn{
@@ -366,16 +363,16 @@ section{
     box-shadow: 0 0 20px var(--main-color);
 }
 
-/* services */
+/* skills */
 
-.services{
+.skills{
     background-color: var(--bg-color);
-    align-items: center
+    align-items: center;
 }
 
-.services .title{
+.skills .title{
     font-size: var(--h3-font);
-    color: var(--text-color);
+    font-weight: 700;
     text-align: center;
     margin: 4rem 0 3rem;
 }
@@ -394,16 +391,16 @@ section{
     box-shadow: 0 0 5px var(--main-color);
     transition: all .50s ease;
     cursor: pointer;
+
+    &:hover{
+        border: 1px solid var(--main-color);
+        transform: translateY(-5px) scale(1.03);
+    }
 }
 
 .box span{
     margin-bottom: 20px;
     font-size: 35px;
-}
-
-.box:hover{
-    border: 1px solid var(--main-color);
-    transform: translateY(-5px) scale(1.03);
 }
 
 .box h4{
@@ -429,6 +426,10 @@ section{
     color: var(--text-color);
     border-bottom: 2px solid #5d6c83;
     transition: all .50s ease;
+
+    &:hover{
+        border-bottom: 2px solid var(--main-color);
+    }
 }
 
 .box i{
@@ -438,8 +439,34 @@ section{
     margin-left: 5px;
 }
 
-.box a:hover{
-    border-bottom: 2px solid var(--main-color);
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.box-skills{
+    padding: 58px 40px 66px;
+    background-color: var(--second-bg-color);
+    border-radius: 28px;
+    border: 1px solid transparent;
+    box-shadow: 0 0 5px var(--main-color);
+
+    h4{
+        text-align: center;
+        font-size: 24.8px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+
+    p{
+        font-size: var(--p-font);
+        color: var(--text-color);
+        line-height: 1.9rem;
+        font-weight: 400;
+        margin-bottom: 20px;
+    }
 }
 
 /* Education */
@@ -450,6 +477,7 @@ section{
 
 .education .title{
     font-size: var(--h3-font);
+    font-weight: 700;
     text-align: left;
     margin: 4rem 0 2rem;
 }
@@ -506,6 +534,7 @@ section{
 
 .contact .title{
     font-size: var(--h3-font);
+    font-weight: 700;
     text-align: center;
     margin: 4rem 0 2rem;
 }
