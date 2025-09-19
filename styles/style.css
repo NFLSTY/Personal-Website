@@ -473,6 +473,11 @@ section{
         font-weight: 400;
         margin-bottom: 20px;
     }
+
+    img{
+        height: 50px;
+        width: 50px;
+    }
 }
 
 /* Education */
