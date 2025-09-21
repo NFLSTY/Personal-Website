@@ -40,13 +40,6 @@ span{
     color: var(--main-color);
 }
 
-.hexagon {
-  height: 175px; /* adjust to control the size  */
-  aspect-ratio: 1/cos(30deg);
-  clip-path: polygon(50% -50%,100% 50%,50% 150%,0 50%);
-  background: var(--main-color);
-}
-
 /* Navbar */
 
 header{
@@ -60,13 +53,14 @@ header{
     z-index: 100;
 }
 
-.container{
-    padding-top: 32px;
+header .container{
+    padding-top: 30px;
     display: flex;
     justify-content: space-between;
+    width: 100%;
 }
 
-.container .logo{
+header .container .logo{
     font-size: 28px;
     color: var(--text-color);
     font-weight: 800;
@@ -74,7 +68,7 @@ header{
     transition: 0.5s ease;
 }
 
-.container .logo:hover{
+header .container .logo:hover{
     transform: scale(1.1);
 }
 
@@ -258,8 +252,8 @@ section{
 .about{
     background: var(--second-bg-color);
     display: flex;
-    flex-direction: row-reverse;
     align-items: center;
+    justify-content: center;
     gap: 5rem;
 }
 
@@ -270,33 +264,50 @@ section{
     margin: 4rem 0 2rem;
 }
 
-.about .container{
-    float: right;
-    display: inline-grid;
-    grid-template-columns: auto auto auto; 
-    gap: 15px 10px;
-    
-    img {
-        width: 110px;
-        height: 250px;
-        object-fit: cover;
-        border: 3px solid var(--main-color);
-    }
+.about-content p{
+    font-size: var(--p-font);
+    line-height: 30px;
+    text-align: justify;
 }
 
-.about-content{
-    text-align: justify;
+.about-content h1{
+    font-size: var(--h1-font);
+    font-weight: 600;
+    color: var(--main-color);
+}
 
-    p{
-        font-size: var(--p-font);
-        line-height: 30px;
-    }
+.honeycomb {
+    max-width: 1000px;
+    margin: 11rem auto 0;
+    padding: 1em 1em 1em 1em;
+    display: flex;
+    --hex-shape: polygon(
+        0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%
+    );
+}
 
-    h1{
-        font-size: var(--h1-font);
-        font-weight: 600;
-        color: var(--main-color);
-    }
+.container .hexagon {
+    width: 160px;
+    margin: 4px;
+    display: inline-block;
+    clip-path: var(--hex-shape);
+    margin-top: 45px;
+    margin-bottom: -45px;
+    position: relative;
+    margin-block: -5.8em; /* Adjust gap each hexagons */
+}
+
+.bg-image img {
+    clip-path: var(--hex-shape);
+    position: absolute;
+    margin: 0.8em auto 0.8em auto;
+    width: calc(180px - 20px);
+    height: 180px;
+    object-fit: cover;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
 /* skills */
@@ -368,7 +379,7 @@ section{
     }
 }
 
-.box i{
+.box i {
     vertical-align: middle;
     font-size: 20px;
     color: var(--main-color);
@@ -382,7 +393,7 @@ section{
     justify-items: center;
 }
 
-.box-skills{
+.box-skills {
     padding: 58px 40px 66px;
     background-color: var(--second-bg-color);
     border-radius: 28px;
@@ -429,19 +440,19 @@ section{
     column-gap: 20px;
 }
 
-.content{
+.education .content{
     padding: 0px 30px;
     border-left: 2px solid #2d343f;
 }
 
-.content .list{
+.education .content .list{
     position: relative;
     padding: 20px;
     background-color: var(--other-color);
     margin-bottom: 25px;
 }
 
-.content .list::before{
+.education .content .list::before{
     content: "";
     position: absolute;
     width: 15px;

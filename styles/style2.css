@@ -1,3 +1,5 @@
+@import "/styles/style1.css";
+
 /* Navbar */
 
 @media(max-width:995px){
@@ -34,7 +36,7 @@
 
 /* Home */
 
-@media (max-width: 1000px){
+@media(max-width: 1000px){
     .home{
         gap: 4rem;
     }
@@ -62,6 +64,15 @@
 
 /* About */
 
+@media screen and (min-width: 721px) {
+    .honeycomb {
+        max-width: 710px;
+    }
+
+    .hexagon:nth-child(2n + 1) {
+        margin-left: 8.7em; /* Adjust height each hexagons */
+    }
+}
 
 /* skills */
 
