@@ -491,7 +491,7 @@ form .send-btn:hover{
     margin: 4rem 0 2rem;
 }
 
-.box{
+.box-portfolio{
     padding: 58px 40px 66px;
     background-color: var(--second-bg-color);
     border-radius: 28px;
@@ -500,10 +500,10 @@ form .send-btn:hover{
     transition: all .50s ease;
     cursor: pointer;
 
-    &:hover{
+    /* &:hover{
         border: 1px solid var(--main-color);
         transform: translateY(-5px) scale(1.03);
-    }
+    } */
     
     span{
         margin-bottom: 20px;
@@ -516,24 +516,6 @@ form .send-btn:hover{
         font-weight: 700;
     }
 
-    i{
-        vertical-align: middle;
-        font-size: 20px;
-        color: var(--main-color);
-        margin-left: 5px;
-    }
-
-    a{
-        display: inline-block;
-        font-size: 17.5px;
-        line-height: 1.273rem;
-        font-weight: 500;
-        padding: 7px 0;
-        color: var(--text-color);
-        border-bottom: 2px solid #5d6c83;
-        transition: all .50s ease;
-    }
-
     p{
         font-size: var(--p-font);
         color: var(--text-color);
@@ -541,10 +523,11 @@ form .send-btn:hover{
         font-weight: 400;
         margin-bottom: 20px;
     }
+}
 
-    &:hover{
-        border-bottom: 2px solid var(--main-color);
-    }
+.p-btn {
+    display: flex;
+    gap: 1.3rem;
 }
 
 /* Footer */
