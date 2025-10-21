@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
 *{
     margin: 0;
@@ -25,7 +25,7 @@
 }
 
 html{
-    font-size: 62.5%;
+    font-size: 72.5%;
 }
 
 body{
@@ -256,14 +256,14 @@ section{
     font-size: var(--h3-font);
     font-weight: 700;
     text-align: left;
-    margin: 4rem 0 2rem;
+    margin: 4rem 0 0;
 }
 
 .about-container{
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    gap: 5rem;
     align-items: center;
 }
 
@@ -291,7 +291,7 @@ section{
 
 .stat-card {
     background: var(--bg-color);
-    padding: 2rem;
+    padding: 4rem;
     border-radius: 20px;
     border: 1px solid rgba(0, 217, 255, 0.2);
     text-align: center;
@@ -304,15 +304,15 @@ section{
 }
 
 .stat-number {
-    font-size: 2.5rem;
-    font-weight: 800;
+    font-size: 4.5rem;
+    font-weight: 700;
     color: var(--main-color);
     margin-bottom: 0.5rem;
 }
 
 .stat-label {
     color: var(--text-color);
-    font-size: 0.95rem;
+    font-size: 1.45rem;
 }
 
 /* skills */
