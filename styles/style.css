@@ -331,15 +331,8 @@ section{
 
 .grid{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
     gap: 3rem;
-}
-
-.skills-grid{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
-    gap: 20px;
-    justify-items: center;
 }
 
 .box-skills{
