@@ -423,6 +423,13 @@ section{
     background: var(--bg-primary);
 }
 
+.projects .title{
+    font-size: var(--h3-font);
+    font-weight: 700;
+    text-align: center;
+    margin: 4rem 0 2rem;
+}
+
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -432,7 +439,7 @@ section{
 }
 
 .project-card {
-    background: var(--bg-secondary);
+    background: var(--second-bg-color);
     border-radius: 20px;
     padding: 2.5rem;
     border: 1px solid rgba(0, 217, 255, 0.1);
@@ -443,13 +450,13 @@ section{
 .project-card:hover {
     transform: translateY(-15px);
     box-shadow: 0 25px 60px rgba(0, 217, 255, 0.2);
-    border-color: var(--accent);
+    border-color: var(--main-color);
 }
 
 .project-icon {
     width: 70px;
     height: 70px;
-    background: var(--gradient-3);
+    background: var(--main-color);
     border-radius: 15px;
     display: flex;
     align-items: center;
@@ -464,7 +471,7 @@ section{
 }
 
 .project-card p {
-    color: var(--text-secondary);
+    color: var(--text-color);
     line-height: 1.7;
     margin-bottom: 1.5rem;
 }
@@ -485,14 +492,14 @@ section{
 }
 
 .project-link.primary {
-    background: var(--accent);
-    color: var(--bg-primary);
+    background: var(--main-color);
+    color: var(--bg-color);
 }
 
 .project-link.secondary {
     background: transparent;
-    border: 2px solid var(--accent);
-    color: var(--accent);
+    border: 2px solid var(--main-color);
+    color: var(--main-color);
 }
 
 .project-link:hover {
