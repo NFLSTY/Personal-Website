@@ -329,7 +329,7 @@ section{
     margin: 4rem 0 2rem;
 }
 
-.grid{
+.skills-grid{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
     gap: 3rem;
@@ -468,7 +468,7 @@ section{
 }
 
 .project-card h4 {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     margin-bottom: 1rem;
 }
 
@@ -476,11 +476,13 @@ section{
     color: var(--text-color);
     line-height: 1.7;
     margin-bottom: 1.5rem;
+    font-size: 1.2rem;
 }
 
 .project-links {
     display: flex;
     gap: 1rem;
+    font-size: 1.2rem;
 }
 
 .project-link {
