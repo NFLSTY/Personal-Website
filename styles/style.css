@@ -382,8 +382,10 @@ section{
 .education .content .list{
     position: relative;
     padding: 20px;
-    background-color: var(--other-color);
+    background-color: var(--bg-color);
     margin-bottom: 25px;
+    border: 1px solid rgba(0, 217, 255, 0.2);
+    border-radius: 15px;
 }
 
 .education .content .list::before{
@@ -564,59 +566,6 @@ form .send-btn:hover{
     color: var(--main-color);
     box-shadow: 0 0 20px var(--main-color);
     cursor: pointer;
-}
-
-/* Portfolio */
-
-.portfolio{
-    background-color: var(--second-bg-color);
-    align-items: center;
-}
-
-.portfolio .title{
-    font-size: var(--h3-font);
-    font-weight: 700;
-    text-align: center;
-    margin: 4rem 0 2rem;
-}
-
-.box-portfolio{
-    padding: 58px 40px 66px;
-    background-color: var(--second-bg-color);
-    border-radius: 28px;
-    border: 1px solid transparent;
-    box-shadow: 0 0 5px var(--main-color);
-    transition: all .50s ease;
-    cursor: pointer;
-
-    /* &:hover{
-        border: 1px solid var(--main-color);
-        transform: translateY(-5px) scale(1.03);
-    } */
-    
-    span{
-        margin-bottom: 20px;
-        font-size: 35px;
-    }
-
-    h4{
-        font-size: 24.8px;
-        margin-bottom: 10px;
-        font-weight: 700;
-    }
-
-    p{
-        font-size: var(--p-font);
-        color: var(--text-color);
-        line-height: 1.9rem;
-        font-weight: 400;
-        margin-bottom: 20px;
-    }
-}
-
-.p-btn {
-    display: flex;
-    gap: 1.3rem;
 }
 
 /* Footer */
