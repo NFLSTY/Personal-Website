@@ -341,18 +341,25 @@ section{
     border-radius: 28px;
     border: 1px solid transparent;
     box-shadow: 0 0 5px var(--main-color);
+}
 
-    h4{
-        text-align: center;
-        font-size: 24.8px;
-        margin-bottom: 10px;
-        font-weight: 700;
-    }
+.box-skills h4{
+    text-align: center;
+    font-size: 24.8px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
 
-    img{
-        height: 50px;
-        width: 50px;
-    }
+.box-skills .skill-icons{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+    gap: 1.5rem;
+    justify-items: center;
+}
+
+.box-skills .skill-icons img{
+    height: 60px;
+    width: 60px;
 }
 
 /* Education */
