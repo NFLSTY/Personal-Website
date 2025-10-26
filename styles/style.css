@@ -564,7 +564,7 @@ form textarea:valid:not(:placeholder-shown){
     border: 2px solid var(--main-color);
 }
 
-form .send-btn{
+form .submit-btn{
     display: inline-block;
     padding: 11px 26px;
     background: var(--main-color);
@@ -577,7 +577,7 @@ form .send-btn{
     width: 100%;
 }
 
-form .send-btn:hover{
+form .submit-btn:hover{
     background: transparent;
     color: var(--main-color);
     box-shadow: 0 0 20px var(--main-color);

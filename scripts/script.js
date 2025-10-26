@@ -67,9 +67,9 @@ document.querySelectorAll('.box-skills, .project-card, .list').forEach(el => {
 const url =
   'https://script.google.com/macros/s/AKfycbzta3bltFi4sgWAGA7Y0f1oHdZnVDsTqzijLz0ZWBjsIVJgUmEiQOj7OpU-Z5C8-0qa/exec';
 
-document
-  .getElementById('contact-form')
-  .addEventListener('submit', function (event) {
+const contactForm = document.getElementById('contact-form');
+if (contactForm) {
+  contactForm.addEventListener('submit', function (event) {
     event.preventDefault();
 
     const formData = new FormData(this);
@@ -85,7 +85,12 @@ document
       .then((res) => res.json())
       .then((data) => {
         console.log('Successful', data);
+        alert('Message sent successfully!');
         this.reset();
       })
-      .catch((err) => console.log('err', err));
+      .catch((err) => {
+        console.log('err', err);
+        alert('Failed to send message. Please try again.');
+      });
   });
+}
