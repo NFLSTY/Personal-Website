@@ -36,6 +36,10 @@ body{
     color: var(--text-color);
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 span{
     color: var(--main-color);
 }
