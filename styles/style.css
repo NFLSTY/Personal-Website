@@ -37,7 +37,7 @@ body{
 }
 
 body::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 
 span{
@@ -166,7 +166,7 @@ section{
     border: 0.2rem solid var(--main-color);
     font-size: 2rem;
     border-radius: 50%;
-    margin: 3rem 1.5rem 3rem 0;
+    margin: 2.5rem 1.5rem 3rem 0;
     transition: 0.3s ease;
     color: var(--main-color);
 }
@@ -534,15 +534,14 @@ section{
     margin: 4rem 0 2rem;
 }
 
-.contact-form{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.contact-form form{
+.form-container{
+    float: right;
+    background: var(--bg-color);
+    padding: 3rem;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 217, 255, 0.2);
     position: relative;
-    width: 600px;
+    width: 690px;
 }
 
 form input,
@@ -632,7 +631,7 @@ form .submit-btn:disabled{
     
 .footer{
     padding: 3rem 0;
-    background-color: var(--second-bg-color);
+    background-color: var(--bg-color);
     text-align: center;
 }
 
