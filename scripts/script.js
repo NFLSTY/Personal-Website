@@ -69,8 +69,17 @@ const url =
 
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {
+  const submitBtn = contactForm.querySelector('.submit-btn');
+  const btnText = submitBtn.querySelector('.btn-text');
+  const loader = submitBtn.querySelector('.loader');
+  
   contactForm.addEventListener('submit', function (event) {
     event.preventDefault();
+
+    // Show loader and hide button text
+    btnText.style.display = 'none';
+    loader.style.display = 'inline-block';
+    submitBtn.disabled = true;
 
     const formData = new FormData(this);
     const data = Object.fromEntries(formData);
@@ -85,11 +94,19 @@ if (contactForm) {
       .then((res) => res.json())
       .then((data) => {
         console.log('Successful', data);
+        // Hide loader and restore button
+        loader.style.display = 'none';
+        btnText.style.display = 'inline-block';
+        submitBtn.disabled = false;
         alert('Message sent successfully!');
         this.reset();
       })
       .catch((err) => {
         console.log('err', err);
+        // Hide loader and restore button
+        loader.style.display = 'none';
+        btnText.style.display = 'inline-block';
+        submitBtn.disabled = false;
         alert('Failed to send message. Please try again.');
       });
   });
