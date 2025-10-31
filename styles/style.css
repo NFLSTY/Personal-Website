@@ -536,12 +536,21 @@ section{
 
 .contact-container{
     float: left;
-    width: 510px;
+    width: 500px;
+    margin-left: 2.5rem;
+}
+
+.contact-intro {
+    font-size: var(--p-font);
+    line-height: 1.8;
+    margin-top: 2.5rem;
+    margin-bottom: 6rem;
+    color: var(--text-color);
+    padding-left: 1rem;
 }
 
 .contact-card{
-    padding-left: 3rem;
-    padding-bottom: 4rem;
+    padding-bottom: 3.5rem;
     width: 440px;
     display: flex;
     align-items: center;
@@ -569,9 +578,10 @@ section{
     background: var(--bg-color);
     padding: 3rem;
     border-radius: 20px;
+    margin-right: 2.5rem;
     border: 1px solid rgba(0, 217, 255, 0.2);
     position: relative;
-    width: 660px;
+    width: 620px;
 }
 
 form input,
