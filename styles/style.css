@@ -85,7 +85,6 @@ nav a{
     border-bottom: 3px solid transparent;
 }
 
-nav a:hover,
 nav a.active{
     color: var(--main-color);
     border-bottom: 3px solid var(--main-color);
