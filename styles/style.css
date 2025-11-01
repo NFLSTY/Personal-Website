@@ -543,7 +543,7 @@ section{
 .contact-intro {
     font-size: var(--p-font);
     line-height: 1.8;
-    margin-top: 2.5rem;
+    margin-top: 3rem;
     margin-bottom: 6rem;
     color: var(--text-color);
     padding-left: 1rem;
