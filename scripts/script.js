@@ -20,9 +20,13 @@ window.addEventListener('scroll', () => {
     });
 
     navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${current}`) {
-            link.classList.add('active');
+        // Exclude the contact button from active state management
+        if (!link.classList.contains('c-btn')) {
+            link.classList.remove('active');
+            // Only add active class if current section is not contact
+            if (link.getAttribute('href') === `#${current}` && current !== 'contact') {
+                link.classList.add('active');
+            }
         }
     });
 });
