@@ -45,6 +45,39 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// See More Projects functionality
+const seeMoreBtn = document.getElementById('seeMoreBtn');
+const moreProjects = document.querySelectorAll('.more-project');
+
+if (moreProjects.length > 0 && seeMoreBtn) {
+    seeMoreBtn.style.display = 'block';
+}
+
+if (seeMoreBtn) {
+    seeMoreBtn.addEventListener('click', function() {
+        const isExpanded = this.classList.contains('expanded');
+        
+        if (!isExpanded) {
+            // Show all more projects
+            moreProjects.forEach(project => {
+                project.classList.add('show');
+            });
+            this.innerHTML = 'Show Less <i class="fa-solid fa-chevron-down"></i>';
+            this.classList.add('expanded');
+        } else {
+            // Hide all projects again
+            moreProjects.forEach(project => {
+                project.classList.remove('show');
+            });
+            this.innerHTML = 'See More Projects <i class="fa-solid fa-chevron-down"></i>';
+            this.classList.remove('expanded');
+            
+            // Scroll back to projects section
+            document.getElementById('projects').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    });
+}
+
 // Intersection Observer for animations
 const observerOptions = {
     threshold: 0.1,
