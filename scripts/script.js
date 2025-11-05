@@ -148,3 +148,46 @@ if (contactForm) {
       });
   });
 }
+
+// Mobile navigation (hamburger) toggle
+const menuToggle = document.getElementById('menu-toggle');
+const navbarEl = document.getElementById('navbar');
+
+if (menuToggle && navbarEl) {
+    const setExpanded = (expanded) => {
+        menuToggle.setAttribute('aria-expanded', String(expanded));
+        document.body.classList.toggle('menu-open', expanded);
+        navbarEl.classList.toggle('open', expanded);
+        // Swap icon
+        menuToggle.innerHTML = expanded
+            ? '<i class="fa-solid fa-xmark"></i>'
+            : '<i class="fa-solid fa-bars"></i>';
+    };
+
+    const isOpen = () => navbarEl.classList.contains('open');
+
+    menuToggle.addEventListener('click', () => {
+        setExpanded(!isOpen());
+    });
+
+    // Close menu when a nav link is clicked
+    navbarEl.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => {
+            if (isOpen()) setExpanded(false);
+        });
+    });
+
+    // Close on Escape key
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && isOpen()) {
+            setExpanded(false);
+        }
+    });
+
+    // Reset state on resize to desktop
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768 && isOpen()) {
+            setExpanded(false);
+        }
+    });
+}
