@@ -90,6 +90,30 @@ nav a.active {
     border-bottom: 3px solid var(--main-color);
 }
 
+/* Mobile menu toggle (hidden by default) */
+.menu-toggle {
+    display: none;
+    background: transparent;
+    color: var(--text-color);
+    font-size: 2.2rem;
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.menu-toggle:focus-visible {
+    outline: 2px solid var(--main-color);
+    outline-offset: 2px;
+}
+
+.menu-toggle:hover {
+    background: rgba(255,255,255,0.06);
+    transform: scale(1.05);
+}
+
 section {
     min-height: 100vh;
     padding: 5rem 9% 5rem;
@@ -112,6 +136,12 @@ section {
     color: var(--main-color);
     box-shadow: 0 0 20px var(--main-color);
     transform: scale(1.1);
+}
+
+/* Optional: header style when scrolled */
+header.scrolled {
+    background: rgba(3, 3, 22, 0.75);
+    border-bottom: 1px solid rgba(0, 217, 255, 0.15);
 }
 
 /* Home */
@@ -724,4 +754,182 @@ form .submit-btn:disabled {
 .footer p {
     font-size: var(--p-font);
     color: var(--text-color);
+}
+
+/* --------- Responsive styles --------- */
+
+/* Tablet */
+@media (max-width: 992px) {
+    :root {
+        --h1-font: 3.6rem;
+        --h2-font: 3rem;
+        --h3-font: 2.6rem;
+        --p-font: 1.3rem;
+    }
+
+    header {
+        padding: 0 5%;
+    }
+
+    section {
+        padding: 5rem 5% 5rem;
+    }
+
+    /* Home stacks */
+    .home {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 3rem;
+    }
+
+    .home-img img {
+        width: 55vw;
+        max-width: 360px;
+    }
+
+    /* About */
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .about-visual {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Education */
+    .row {
+        grid-template-columns: 1fr;
+        row-gap: 2rem;
+    }
+
+    /* Skills */
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    /* Projects */
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    /* Contact: stack and remove floats */
+    .contact-container,
+    .form-container {
+        float: none;
+        width: 100%;
+        margin: 0;
+    }
+
+    .contact-intro {
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+        padding-left: 0;
+        text-align: left;
+    }
+
+    .contact-card {
+        width: 100%;
+    }
+
+    .form-container {
+        margin-top: 3rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    :root {
+        --h1-font: 3rem;
+        --h2-font: 2.4rem;
+        --h3-font: 2.2rem;
+        --p-font: 1.25rem;
+    }
+
+    /* Show hamburger */
+    .menu-toggle {
+        display: inline-flex;
+    }
+
+    /* Off-canvas nav */
+    #navbar {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 78%;
+        max-width: 320px;
+        background: var(--second-bg-color);
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.4);
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+        padding: 100px 24px 24px; /* account for fixed header */
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        z-index: 200;
+    }
+
+    #navbar.open {
+        transform: translateX(0);
+    }
+
+    #navbar a {
+        margin: 14px 0;
+        font-size: 1.6rem;
+        border-bottom: none;
+    }
+
+    #navbar a.c-btn {
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    /* Keep header content spaced when nav is hidden */
+    header .container {
+        align-items: center;
+        gap: 12px;
+    }
+
+    nav a.active {
+        border-bottom: none;
+        color: var(--main-color);
+    }
+
+    /* Home image a bit larger on small screens */
+    .home-img img {
+        width: 70vw;
+        max-width: 380px;
+    }
+
+    /* Contact icon and text fit better */
+    .contact-icon {
+        width: 44px;
+        height: 44px;
+    }
+
+    /* Prevent background scroll when menu is open */
+    body.menu-open {
+        overflow: hidden;
+    }
+}
+
+/* Very small devices */
+@media (max-width: 420px) {
+    :root {
+        --h1-font: 2.6rem;
+        --h2-font: 2.2rem;
+        --h3-font: 2rem;
+        --p-font: 1.15rem;
+    }
+
+    .about-visual {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-grid,
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
 }
