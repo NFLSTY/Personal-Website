@@ -138,12 +138,6 @@ section {
     transform: scale(1.1);
 }
 
-/* Optional: header style when scrolled */
-header.scrolled {
-    background: rgba(3, 3, 22, 0.75);
-    border-bottom: 1px solid rgba(0, 217, 255, 0.15);
-}
-
 /* Home */
 
 .home {
@@ -246,7 +240,6 @@ header.scrolled {
 
 .typing-text span::after {
     content: "";
-    background-color: black;
     position: absolute;
     width: calc(100% + 8px);
     height: 100%;
