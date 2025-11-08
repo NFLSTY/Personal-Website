@@ -463,16 +463,13 @@ section {
 
 .projects {
     background: var(--bg-color);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
 .projects .title {
     font-size: var(--h3-font);
     font-weight: 700;
     text-align: center;
-    margin-bottom: 2rem;
+    margin: 3.5rem 0 2rem;
 }
 
 .projects-grid {
@@ -610,7 +607,7 @@ section {
     font-size: var(--h3-font);
     font-weight: 700;
     text-align: center;
-    margin: 3rem 0 3rem;
+    margin: 3.5rem 0 2rem;
 }
 
 .contact-container {
