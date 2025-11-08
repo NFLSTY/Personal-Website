@@ -82,12 +82,27 @@ nav a {
     margin-left: 40px;
     font-weight: 500;
     transition: 0.3s ease;
-    border-bottom: 3px solid transparent;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: var(--main-color);
+    transition: width 0.3s ease;
 }
 
 nav a.active {
     color: var(--main-color);
-    border-bottom: 3px solid var(--main-color);
+}
+
+nav a.active::after {
+    width: 100%;
 }
 
 /* Mobile menu toggle (hidden by default) */
