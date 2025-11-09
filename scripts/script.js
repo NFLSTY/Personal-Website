@@ -80,8 +80,8 @@ if (seeMoreBtn) {
 
 // Intersection Observer for animations
 const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -100px 0px'
+    threshold: 0.15,
+    rootMargin: '0px 0px -50px 0px'
 };
 
 const observer = new IntersectionObserver((entries) => {
@@ -93,11 +93,47 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
+// Animate skill boxes, project cards, and education items
 document.querySelectorAll('.box-skills, .project-card, .list').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(30px)';
     el.style.transition = 'all 0.6s ease';
     observer.observe(el);
+});
+
+// Animate section titles
+const titleObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, {
+    threshold: 0.1,
+    rootMargin: '0px'
+});
+
+// Add fade-in class to section titles
+document.querySelectorAll('.about .title, .skills .title, .education .title, .projects .title, .contact .title').forEach(title => {
+    title.classList.add('fade-in');
+    titleObserver.observe(title);
+});
+
+// Animate section contents
+const contentObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, {
+    threshold: 0.2,
+    rootMargin: '0px'
+});
+
+// Add fade-in class to section contents
+document.querySelectorAll('.home-img, .home-content, .about-content, .about-visual, .contact-container, .form-container').forEach(el => {
+    contentObserver.observe(el);
 });
 
 // Handling contact form submission
