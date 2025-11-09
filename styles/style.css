@@ -106,6 +106,7 @@ nav a.active::after {
 }
 
 /* Mobile menu toggle (hidden by default) */
+
 .menu-toggle {
     display: none;
     background: transparent;
@@ -160,6 +161,29 @@ section {
     justify-content: center;
     align-items: center;
     gap: 5rem;
+}
+
+.home-img {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.home-img.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.home-content {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: opacity 1s ease, transform 1s ease;
+    transition-delay: 0.3s;
+}
+
+.home-content.visible {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .home-content h1 {
@@ -296,7 +320,7 @@ section {
     justify-content: center;
 }
 
-.about-title {
+.about .title {
     font-size: var(--h3-font);
     font-weight: 700;
     text-align: left;
@@ -313,6 +337,32 @@ section {
     max-width: 1200px;
 }
 
+.about-content {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.about-content.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.about-visual {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    opacity: 0;
+    transform: translateX(100px);
+    transition: opacity 1s ease, transform 1s ease;
+    transition-delay: 0.2s;
+}
+
+.about-visual.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
 .about-content p {
     font-size: var(--p-font);
     line-height: 1.9;
@@ -327,12 +377,6 @@ section {
     margin: 2rem 0;
     padding-left: 1.5rem;
     border-left: 4px solid var(--main-color);
-}
-
-.about-visual {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
 }
 
 .stat-card {
@@ -633,6 +677,28 @@ section {
     float: left;
     width: 500px;
     margin-left: 2.5rem;
+}
+
+.contact-container {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.contact-container.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.form-container {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.form-container.visible {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .contact-intro {
