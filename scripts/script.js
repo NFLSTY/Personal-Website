@@ -94,10 +94,10 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Animate skill boxes, project cards, and education items
-document.querySelectorAll('.box-skills, .project-card, .list').forEach(el => {
+document.querySelectorAll('.box-skills, .project-card, .see-more-btn, .list').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(30px)';
-    el.style.transition = 'all 0.6s ease';
+    el.style.transition = 'all 1s ease';
     observer.observe(el);
 });
 
@@ -105,7 +105,8 @@ document.querySelectorAll('.box-skills, .project-card, .list').forEach(el => {
 const titleObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
         }
     });
 }, {
@@ -114,9 +115,11 @@ const titleObserver = new IntersectionObserver((entries) => {
 });
 
 // Add fade-in class to section titles
-document.querySelectorAll('.about .title, .skills .title, .education .title, .projects .title, .contact .title').forEach(title => {
-    title.classList.add('fade-in');
-    titleObserver.observe(title);
+document.querySelectorAll('.about .title, .skills .title, .education .title, .projects .title, .contact .title').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(30px)';
+    el.style.transition = 'all 1s ease';
+    titleObserver.observe(el);
 });
 
 // Animate section contents
