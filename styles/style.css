@@ -295,19 +295,19 @@ section {
 
 @keyframes words {
     0%, 20% {
-        content: "Programmer";
+        content: "Developer";
     }
     21%, 40% {
         content: "Tech Enthusiast";
     }
     41%, 60% {
-        content: "Big Dreamer";
-    }
-    61%, 80% {
         content: "Problem Solver";
     }
-    81%, 100% {
+    61%, 80% {
         content: "Lifelong Learner";
+    }
+    81%, 100% {
+        content: "Curious Person";
     }
 }
 
