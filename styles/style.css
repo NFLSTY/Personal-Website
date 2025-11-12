@@ -26,13 +26,12 @@
     /* Additional consistent font sizes */
     --stat-number-font: 3.5rem;
     --stat-label-font: 1.45rem;
-    --skill-title-font: 2.45rem;
+    --skill-title-font: 2rem;
     --skill-icon-size: 60px;
 }
 
 html {
     font-size: 72.5%;
-    overflow-x: hidden;
     max-width: 100%;
 }
 
@@ -64,11 +63,6 @@ header {
     backdrop-filter: blur(10px);
     display: flex;
     z-index: 100;
-    transition: transform 0.3s ease;
-}
-
-header.scrolled {
-    transform: translateY(-100%);
 }
 
 header .container {
@@ -917,17 +911,6 @@ form .submit-btn:disabled {
         padding: 2rem;
     }
 
-    /* Education */
-    .row {
-        grid-template-columns: 1fr;
-        row-gap: 2rem;
-        padding-left: 10px;
-    }
-
-    .education .title {
-        padding-left: 0px;
-    }
-
     /* Skills */
     .skills-grid {
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -935,6 +918,13 @@ form .submit-btn:disabled {
 
     .box-skills {
         padding: 40px 30px 50px;
+    }
+
+    /* Education */
+    .row {
+        grid-template-columns: 1fr;
+        row-gap: 2rem;
+        padding-left: 10px;
     }
 
     /* Projects */
@@ -964,13 +954,26 @@ form .submit-btn:disabled {
     }
 
     .form-container {
-        margin-top: 3rem;
+        margin-top: 1rem;
         padding: 2rem;
     }
 }
 
 /* Mobile */
 @media (max-width: 768px) {
+    html {
+        overflow-x: hidden;
+    }
+    
+    header {
+        height: 70px;
+    }
+
+    header .container {
+        height: 80px;
+        padding-top: 0px;
+    }
+
     :root {
         --h1-font: 3rem;
         --h2-font: 2.4rem;
@@ -1024,7 +1027,6 @@ form .submit-btn:disabled {
         margin-top: 10px;
     }
 
-    /* Keep header content spaced when nav is hidden */
     header .container {
         align-items: center;
         gap: 12px;
@@ -1035,14 +1037,13 @@ form .submit-btn:disabled {
         color: var(--main-color);
     }
 
-    /* Home section spacing for mobile */
+    /* Home */
     .home {
-        padding-top: 8rem;
+        padding-top: 4rem;
     }
 
-    /* Home image smaller on mobile screens */
     .home-img img {
-        width: 45vw;
+        width: 55vw;
         max-width: 260px;
     }
 
@@ -1050,7 +1051,11 @@ form .submit-btn:disabled {
         padding: 1.8rem;
     }
 
-    /* Skills section - reduce size for mobile */
+    /* Skills */
+    .skills .title {
+        margin: 2.5rem 0 2rem;
+    }
+
     .box-skills {
         padding: 35px 25px 40px;
     }
@@ -1063,7 +1068,22 @@ form .submit-btn:disabled {
         gap: 1.2rem;
     }
 
-    /* Contact icon and text fit better */
+    /* Education */
+    .education .title {
+        margin: 2.5rem 0 2rem;
+        padding-left: 0px;
+    }
+
+    /* Projects */
+    .projects .title {
+        margin: 2.5rem 0 2rem;
+    }
+
+    /* Contact */
+    .contact .title {
+        margin: 2.5rem 0 2rem;
+    }
+
     .contact-icon {
         width: 44px;
         height: 44px;
