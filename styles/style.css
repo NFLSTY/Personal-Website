@@ -966,25 +966,29 @@ form .submit-btn:disabled {
     }
     
     header {
-        height: 70px;
+        height: 50px;
     }
 
     header .container {
-        height: 80px;
+        height: 60px;
         padding-top: 0px;
     }
 
     :root {
-        --h1-font: 3rem;
-        --h2-font: 2.4rem;
-        --h3-font: 2.2rem;
-        --p-font: 1.25rem;
+        --h1-font: 2.4rem;
+        --h2-font: 2rem;
+        --h3-font: 1.8rem;
+        --p-font: 1rem;
         
         /* Mobile-specific sizes */
-        --stat-number-font: 2.4rem;
-        --stat-label-font: 1.2rem;
-        --skill-title-font: 1.8rem;
+        --stat-number-font: 2rem;
+        --stat-label-font: 1rem;
+        --skill-title-font: 1.5rem;
         --skill-icon-size: 45px;
+    }
+
+    header .container .logo {
+        font-size: 18px;
     }
 
     /* Show hamburger */
@@ -998,7 +1002,7 @@ form .submit-btn:disabled {
         top: 0;
         right: 0;
         height: 100vh;
-        width: 78%;
+        width: 58%;
         max-width: 320px;
         background: var(--second-bg-color);
         box-shadow: -10px 0 30px rgba(0, 0, 0, 0.4);
@@ -1017,7 +1021,7 @@ form .submit-btn:disabled {
 
     #navbar a {
         margin: 14px 0;
-        font-size: 1.6rem;
+        font-size: 1.3rem;
         border-bottom: none;
     }
 
@@ -1074,9 +1078,41 @@ form .submit-btn:disabled {
         padding-left: 0px;
     }
 
+    .list h4 {
+        font-size: 13px;
+    }
+
+    .list h5 {
+        font-size: 15px;
+    }
+
+    .list p {
+        font-size: 1rem;
+    }
+
     /* Projects */
     .projects .title {
         margin: 2.5rem 0 2rem;
+    }
+
+    .project-card h4 {
+        font-size: 1.4rem;
+    }
+
+    .project-card p {
+        font-size: 1rem;
+    }
+
+    .project-links {
+        font-size: 1rem;
+    }
+
+    .project-link {
+        padding: 1rem;
+    }
+
+    .see-more-btn {
+        font-size: 1rem;
     }
 
     /* Contact */
@@ -1084,9 +1120,33 @@ form .submit-btn:disabled {
         margin: 2.5rem 0 2rem;
     }
 
+    .contact-intro {
+        font-size: 1rem;
+        margin-bottom: 4rem;
+    }
+
+    .contact-card h4 {
+        font-size: 1rem;
+    }
+
     .contact-icon {
         width: 44px;
         height: 44px;
+    }
+
+    form input,
+    form textarea {
+        font-size: 13px;
+        padding: 15px;
+    }
+
+    form .submit-btn {
+        font-size: 14px;
+        padding: 10px 22px;
+    }
+
+    .btn-text {
+        font-size: 14px;
     }
 
     /* Prevent background scroll when menu is open */
@@ -1098,15 +1158,15 @@ form .submit-btn:disabled {
 /* Very small devices */
 @media (max-width: 420px) {
     :root {
-        --h1-font: 2.6rem;
-        --h2-font: 2.2rem;
-        --h3-font: 2rem;
-        --p-font: 1.15rem;
+        --h1-font: 2rem;
+        --h2-font: 1.8rem;
+        --h3-font: 1.6rem;
+        --p-font: 0.95rem;
         
         /* Very small device-specific sizes */
-        --stat-number-font: 2rem;
-        --stat-label-font: 1.1rem;
-        --skill-title-font: 1.6rem;
+        --stat-number-font: 1.8rem;
+        --stat-label-font: 0.95rem;
+        --skill-title-font: 1.4rem;
         --skill-icon-size: 40px;
     }
 
@@ -1135,6 +1195,66 @@ form .submit-btn:disabled {
 
     .about-visual {
         grid-template-columns: 1fr;
+    }
+
+    /* Education */
+    .list h4 {
+        font-size: 12px;
+    }
+
+    .list h5 {
+        font-size: 14px;
+    }
+
+    .list p {
+        font-size: var(--p-font);
+    }
+
+    /* Projects */
+    .project-card h4 {
+        font-size: 1.3rem;
+    }
+
+    .project-card p {
+        font-size: var(--p-font);
+    }
+
+    .project-links {
+        font-size: 0.95rem;
+    }
+
+    .project-link {
+        padding: 0.9rem;
+    }
+
+    /* Contact */
+    .contact-intro {
+        font-size: 0.95rem;
+        margin-bottom: 3rem;
+    }
+
+    .contact-card h4 {
+        font-size: 1rem;
+    }
+
+    .contact-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    form input,
+    form textarea {
+        font-size: 12px;
+        padding: 14px;
+    }
+
+    form .submit-btn {
+        font-size: 13px;
+        padding: 9px 20px;
+    }
+
+    .btn-text {
+        font-size: 13px;
     }
 
     .skills-grid,
